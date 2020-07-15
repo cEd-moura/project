@@ -4,7 +4,10 @@ const requireDir = require('require-dir');
 
 //Initializg app    
 const app = express();
+
+//Allow server to use json format
 app.use(express.json());
+
 //Connecting to DB
 mongoose.connect('mongodb://localhost:27017/store', { useNewUrlParser: true, useUnifiedTopology: true });
 
