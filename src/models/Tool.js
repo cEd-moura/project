@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
 
 const ToolSchema = new mongoose.Schema({
     description: {
@@ -22,5 +23,7 @@ const ToolSchema = new mongoose.Schema({
         default: 1
     }
 });
+
+ToolSchema.plugin(mongoosePaginate);
 
 mongoose.model('Tool', ToolSchema);
