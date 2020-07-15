@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('marko/node-require');
+require('marko/express');
 const cors = require('cors');
 
 //Initializg app    

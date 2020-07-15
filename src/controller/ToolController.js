@@ -36,5 +36,12 @@ module.exports = {
         return res.json({
             "Mensagem": `A ferramenta ${req.params.id} foi deletada`
         });
+    },
+
+    async teste_marko(req, res) {
+        tools = await Tool.find();
+        res.marko(
+            require('../views/lista.marko'),
+            res.json(tools));
     }
 }
