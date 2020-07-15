@@ -15,7 +15,7 @@ app.use(cors());
 mongoose.connect('mongodb://localhost:27017/store', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //Routes
-app.use('/tools', require("./src/routes"));
+app.use('/', require("./src/routes"));
 
 
 app.listen(3001);
