@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ProductSchema = new mongoose.Schema({
+const ToolSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true
@@ -21,4 +21,6 @@ const ProductSchema = new mongoose.Schema({
         type: Number,
         default: 1
     }
-})
+});
+
+mongoose.model('Tool', ToolSchema);
