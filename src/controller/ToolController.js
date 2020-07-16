@@ -52,5 +52,6 @@ module.exports = {
     },
     async cria_tool_marko(req, res) {
         tool = await Tool.create(req.body);
+        res.redirect('/teste_marko');
     }
 }
