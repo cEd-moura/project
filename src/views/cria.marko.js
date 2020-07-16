@@ -12,11 +12,11 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><body><h1>Cadastro de Ferramentas</h1><form action=/teste_marko/create method=post><input type=hidden id=id name=id><div><label for=description>Descrição:</label><input type=text id=description name=Descrição placeholder=\"coloque a Descrição\"></div><div><label for=price>Preço:</label><input type=number id=price name=price placeholder=\"coloque o preço\"></div><div><label for=typeOfTool>Tipo de Ferramenta:</label><input type=number id=typeOfTool name=price placeholder=\"coloque o tipo\"></div><div><label for=code>Código da Ferramenta:</label><input type=text id=code name=price placeholder=\"coloque o código\"></div><div><label for=quantity>Quantidade:</label><input type=number id=quantity name=price placeholder=\"coloque a quantidade\"></div><input type=submit value=Salvar></form>");
+  out.w("<html><body><h1>Cadastro de Ferramentas</h1><form action=/teste_marko/create method=post><div><label for=description>Descrição:</label><input type=text id=description name=description placeholder=\"coloque a Descrição\"></div><div><label for=price>Preço:</label><input type=number id=price name=price placeholder=\"coloque o preço\"></div><div><label for=typeOfTool>Tipo de Ferramenta:</label><input type=number id=typeOfTool name=typeOfTool placeholder=\"coloque o tipo\"></div><div><label for=code>Código da Ferramenta:</label><input type=text id=code name=code placeholder=\"coloque o código\"></div><div><label for=quantity>Quantidade:</label><input type=number id=quantity name=quantity placeholder=\"coloque a quantidade\"></div><input type=submit value=Salvar></form>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "21");
+  await_reorderer_tag({}, out, __component, "20");
 
   _preferred_script_location_tag({}, out);
 

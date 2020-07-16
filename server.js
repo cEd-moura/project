@@ -3,12 +3,16 @@ const mongoose = require('mongoose');
 require('marko/node-require');
 require('marko/express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 //Initializg app    
 const app = express();
 
 //Allow server to use json format
 app.use(express.json());
+
+//Allowing modifications in the body of request made with a form
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Liberando CORS
 app.use(cors());
