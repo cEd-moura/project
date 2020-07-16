@@ -42,6 +42,6 @@ module.exports = {
         tools = await Tool.find();
         res.marko(
             require('../views/lista.marko'),
-            res.json(tools));
+            tools)
     }
 }

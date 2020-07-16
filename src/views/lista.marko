@@ -7,12 +7,12 @@
 
         <table>
             <tr>
-                <td>ID</td>
-                <td>Título</td>
+                <td>Descrição</td>
+                <td>Preço</td>
             </tr>
-                <tr>
-                <td>1</td>
-                <td>Fundamentos do Node</td>
+                <tr for (tool in tools)>
+                <td>${tool.description}</td>
+                <td>${tool.price}</td>
             </tr>
         </table> 
     </body> 
