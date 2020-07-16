@@ -12,5 +12,5 @@ routes.post('/tools/create', ToolController.createTool);
 routes.put('/tools/update/:id', ToolController.update);
 routes.delete('/tools/delete/:id', ToolController.destroy);
 routes.get('/teste_marko', ToolController.teste_marko);
-
+routes.get('/teste_marko/new', ToolController.cria_marko);
 module.exports = routes;

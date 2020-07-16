@@ -2,11 +2,8 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-    marko_componentType = "/project$1.0.0/src/views/lista.marko",
+    marko_componentType = "/project$1.0.0/src/views/cria.marko",
     marko_renderer = require("marko/src/runtime/components/renderer"),
-    marko_forOf = require("marko/src/runtime/helpers/for-of"),
-    helpers_escape_xml = require("marko/src/runtime/html/helpers/escape-xml"),
-    marko_escapeXml = helpers_escape_xml.x,
     marko_loadTag = require("marko/src/runtime/helpers/load-tag"),
     init_components_tag = marko_loadTag(require("marko/src/core-tags/components/init-components-tag")),
     await_reorderer_tag = marko_loadTag(require("marko/src/core-tags/core/await/reorderer-renderer")),
@@ -15,21 +12,7 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><head><meta charset=utf-8></head><body><h1> Listagem de Ferramentas </h1><table><tr><td>Descrição</td><td>Preço</td></tr>");
-
-  var $for$0 = 0;
-
-  marko_forOf(tools, function(tool) {
-    var $keyScope$0 = "[" + (($for$0++) + "]");
-
-    out.w("<tr><td>" +
-      marko_escapeXml(tool.description) +
-      "</td><td>" +
-      marko_escapeXml(tool.price) +
-      "</td></tr>");
-  });
-
-  out.w("</table> ");
+  out.w("<html><body><h1>Cadastro de Ferramentas</h1><form action=/livros method=post><input type=hidden id=id name=id><div><label for=titulo>Descrição:</label><input type=text id=Descrição name=Descrição placeholder=\"coloque a Descrição\"></div><div><label for=price>Preço:</label><input type=text id=price name=price placeholder=\"coloque o preço\"></div><input type=submit value=Salvar></form>");
 
   init_components_tag({}, out);
 
@@ -37,7 +20,7 @@ function render(input, out, __component, component, state) {
 
   _preferred_script_location_tag({}, out);
 
-  out.w("</body> </html>");
+  out.w("</body></html>");
 }
 
 marko_template._ = marko_renderer(render, {
@@ -46,7 +29,7 @@ marko_template._ = marko_renderer(render, {
   });
 
 marko_template.meta = {
-    id: "/project$1.0.0/src/views/lista.marko",
+    id: "/project$1.0.0/src/views/cria.marko",
     tags: [
       "marko/src/core-tags/components/init-components-tag",
       "marko/src/core-tags/core/await/reorderer-renderer",

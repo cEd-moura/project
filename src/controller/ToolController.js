@@ -43,5 +43,11 @@ module.exports = {
         res.marko(
             require('../views/lista.marko'),
             tools)
+    },
+
+    cria_marko(req, res) {
+        res.marko(
+            require('../views/cria.marko')
+        )
     }
 }
