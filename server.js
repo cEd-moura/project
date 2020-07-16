@@ -8,6 +8,9 @@ const bodyParser = require('body-parser');
 //Initializg app    
 const app = express();
 
+//Allowing express to use static files
+app.use('/static', express.static('src/public'));
+
 //Allow server to use json format
 app.use(express.json());
 

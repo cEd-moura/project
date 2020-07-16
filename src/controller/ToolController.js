@@ -38,25 +38,32 @@ module.exports = {
         });
     },
 
-    async teste_marko(req, res) {
+    async testeMarko(req, res) {
         tools = await Tool.find();
         res.marko(
             require('../views/lista.marko'),
             tools)
     },
 
-    cria_marko(req, res) {
+    criaMarko(req, res) {
         res.marko(
             require('../views/cria.marko')
         )
     },
-    async cria_tool_marko(req, res) {
+    async criaToolMarko(req, res) {
         try {
             tool = await Tool.create(req.body);
             res.redirect('/teste_marko');
         } catch (err) {
             console.log('Verifique o preenchimento dos campos');
             res.redirect('/teste_marko/new')
+        }
+    },
+    async deletaToolMarko(req, res) {
+        try {
+            await Tool.findByIdAndDelete(req.params.id);
+        } catch (error) {
+            console.log('Method Fail');
         }
     }
 }
