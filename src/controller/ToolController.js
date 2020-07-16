@@ -51,7 +51,12 @@ module.exports = {
         )
     },
     async cria_tool_marko(req, res) {
-        tool = await Tool.create(req.body);
-        res.redirect('/teste_marko');
+        try {
+            tool = await Tool.create(req.body);
+            res.redirect('/teste_marko');
+        } catch (err) {
+            console.log('Verifique o preenchimento dos campos');
+            res.redirect('/teste_marko/new')
+        }
     }
 }
