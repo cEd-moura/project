@@ -15,7 +15,7 @@
                 <tr id="tool_${tool._id}" for (tool in tools)>
                 <td>${tool.description}</td>
                 <td>${tool.price}</td>
-                <td><a href="#">Editar</a></td> 
+                <td><a href="/teste_marko/edita/${tool._id}" data-ref="${tool._id}">Editar</a></td> 
                 <td><a href="#" data-ref="${tool._id}" data-type="deletion">Remover</a></td>
             </tr>
         </table> 

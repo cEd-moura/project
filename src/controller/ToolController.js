@@ -50,6 +50,19 @@ module.exports = {
             require('../views/cria.marko')
         )
     },
+
+    async editaMarko(req, res) {
+        try {
+            tool = await Tool.findById(req.params.id);
+            res.marko(
+                require('../views/edita.marko',
+                    tool)
+            )
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
     async criaToolMarko(req, res) {
         try {
             tool = await Tool.create(req.body);
@@ -65,6 +78,15 @@ module.exports = {
             res.status(200).end();
         } catch (error) {
             console.log('Failed');
+        }
+    },
+
+    async updateToolMarko(req, res) {
+        try {
+            tool = await Tool.findByIdAndUpdate(req.params.id, req.body);
+            res.redirect('/teste_marko');
+        } catch (error) {
+            console.log('Ocorreu um erro');
         }
     }
 }

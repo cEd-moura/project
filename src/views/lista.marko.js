@@ -29,7 +29,10 @@ function render(input, out, __component, component, state) {
       marko_escapeXml(tool.description) +
       "</td><td>" +
       marko_escapeXml(tool.price) +
-      "</td><td><a href=#>Editar</a></td> <td><a href=#" +
+      "</td><td><a" +
+      marko_attr("href", "/teste_marko/edita/" + (tool._id == null ? "" : tool._id)) +
+      marko_attr("data-ref", tool._id) +
+      ">Editar</a></td> <td><a href=#" +
       marko_attr("data-ref", tool._id) +
       " data-type=deletion>Remover</a></td></tr>");
   });
