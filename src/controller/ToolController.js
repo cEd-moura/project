@@ -49,5 +49,9 @@ module.exports = {
         res.marko(
             require('../views/cria.marko')
         )
+    },
+
+    async cria_tool_marko(req, res) {
+        tool = await Tool.create(req.body);
     }
 }
