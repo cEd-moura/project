@@ -62,8 +62,9 @@ module.exports = {
     async deletaToolMarko(req, res) {
         try {
             await Tool.findByIdAndDelete(req.params.id);
+            res.status(200).end();
         } catch (error) {
-            console.log('Method Fail');
+            console.log('Failed');
         }
     }
 }

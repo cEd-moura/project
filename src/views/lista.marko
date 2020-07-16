@@ -7,12 +7,14 @@
 
         <table id="tools">
             <tr>
+                <td>ID</td>
                 <td>Descrição</td>
                 <td>Preço</td>
                 <td>Editar</td>
                 <td>Remover</td>
             </tr>
-                <tr id="${tool._id}" for (tool in tools)>
+                <tr id="tool_${tool._id}" for (tool in tools)>
+                <td>${tool._id}</td>
                 <td>${tool.description}</td>
                 <td>${tool.price}</td>
                 <td><a href="#">Editar</a></td> 
