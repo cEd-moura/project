@@ -16,7 +16,7 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<html><head><meta charset=utf-8></head><body><h1> Listagem de Ferramentas </h1><table id=tools><tr><td>ID</td><td>Descrição</td><td>Preço</td><td>Editar</td><td>Remover</td></tr>");
+  out.w("<html><head><meta charset=utf-8></head><body><h1> Listagem de Ferramentas </h1><table id=tools><tr><td>Descrição</td><td>Preço</td><td>Editar</td><td>Remover</td></tr>");
 
   var $for$0 = 0;
 
@@ -26,8 +26,6 @@ function render(input, out, __component, component, state) {
     out.w("<tr" +
       marko_attr("id", "tool_" + (tool._id == null ? "" : tool._id)) +
       "><td>" +
-      marko_escapeXml(tool._id) +
-      "</td><td>" +
       marko_escapeXml(tool.description) +
       "</td><td>" +
       marko_escapeXml(tool.price) +
@@ -40,7 +38,7 @@ function render(input, out, __component, component, state) {
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "20");
+  await_reorderer_tag({}, out, __component, "18");
 
   _preferred_script_location_tag({}, out);
 
