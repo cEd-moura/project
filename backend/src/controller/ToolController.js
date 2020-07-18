@@ -8,7 +8,7 @@ const Tool = mongoose.model('Tool');
 module.exports = {
     async index(req, res) {
         const { page = 1 } = req.query;
-        const tools = await Tool.paginate({}, { page, limit: 20 });
+        const tools = await Tool.paginate({}, { page, limit: 10 });
 
         return res.json(tools);
     },
