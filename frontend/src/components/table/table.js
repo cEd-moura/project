@@ -35,6 +35,7 @@ export default class Table extends Component {
     }
 
     render() {
+        const { page, toolInfo } = this.state;
         return (
             <div>
                 <div>
@@ -58,8 +59,8 @@ export default class Table extends Component {
                     </table>
                 </div>
                 <div className="pagination">
-                    <button onClick={this.prevPage}>Anterior</button>
-                    <button onClick={this.nextPage}>Próxima</button>
+                    <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
+                    <button disabled={page === toolInfo.pages} onClick={this.nextPage}>Próxima</button>
                 </div>
             </div>
         )
