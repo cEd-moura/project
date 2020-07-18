@@ -1,0 +1,10 @@
+h1{
+    font-size: 40px;
+    padding:20px 0px 20px;
+    background: #fcba03;
+    margin: 0 0 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

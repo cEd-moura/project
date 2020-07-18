@@ -1,0 +1,10 @@
+table{
+    font-size: 20px;
+    background: #fcba03;
+    border-radius: 10px;
+    margin:auto;
+}
+
+th{
+    padding: 0px 25px 0px;
+}
